@@ -1,7 +1,11 @@
 .header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
 	@include adaptiveValue("padding-top", 37, 10);
 	@include adaptiveValue("padding-bottom", 37, 10);
-	background-color: #fafbfd;
 	&__container {
 		display: flex;
 		align-items: center;
@@ -10,7 +14,7 @@
 	&__logo {
 		position: relative;
 		flex: 0 1 em(140, 12);
-		z-index: 2;
+		z-index: 5;
 		@media (max-width:$mobileSmall){			
 			 flex: 0 0 em(40, 12);
 			 overflow: hidden; 
@@ -18,12 +22,15 @@
 	}
 	&__buttons {
 		position: relative;
-		flex: 0 1 percent(252, 1057);
+		flex: 0 0 em(252, 12);
 		display: flex;
 		justify-content: end;
 		align-items: center;
 		gap: em(20, 12);
-		z-index: 2;
+		z-index: 5;
+		@media (max-width:$tablet){
+			flex: 0 0 em(170, 12);
+		}
 	}
 	&__menu {
 		flex: 1 1 auto;

@@ -1,1 +1,22 @@
-// Заголовки, общие БЄМ блоки и проче...
+.content {
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 44, 34);
+    line-height: 1.26;
+    color: #000000;
+    &:not(:last-child) {
+      margin-bottom: em(12, 44);
+    }
+    span {
+      color: #4285F4;
+    }
+  }
+  &__text {
+    line-height: 1.38;    
+    letter-spacing: 0.08em;
+    color: #616161;
+    &:not(:last-child) {
+      margin-bottom: em(24, 12);
+    }
+  }
+}
