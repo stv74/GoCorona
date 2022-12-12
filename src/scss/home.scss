@@ -1,9 +1,9 @@
-// Promo
+// Section Promo
 .promo {
   background-color: #fafbfd;
   &__container {
     padding-top: em(153, 12);
-    @include adaptiveValue("padding-bottom", 48, 20);
+    @include adaptiveValue("padding-bottom", 48, 30);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -78,8 +78,8 @@
 }
 // Section App
 .app {
-  @include adaptiveValue("padding-top", 79, 20);
-  @include adaptiveValue("padding-bottom", 79, 20);
+  @include adaptiveValue("padding-top", 79, 30);
+  @include adaptiveValue("padding-bottom", 79, 30);
   &__container {
     display: flex;
     align-items: center;
@@ -160,6 +160,122 @@
       @media (max-width:$mobileSmall){
          right: em(23, 12); 
       }
+    }
+  }
+}
+// Section Experts
+.experts {
+  @include adaptiveValue("padding-top", 104, 70);
+  @include adaptiveValue("padding-bottom", 116, 50);
+  background-color: #fafbfd;
+  &__statistic {
+    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 80, 50);
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    @media (max-width:$mobile){
+       flex-direction: column;
+       align-items: stretch;
+       @include adaptiveValue("row-gap", 45, 30, 0, 768, 320);
+    }
+  }  
+  &__wrapper {
+    flex: 0 1 50%;
+    padding: 0 em(20, 12) 0 em(40, 12);
+    @media (max-width:$pc){
+       padding-left: 0;
+    }
+    @media (max-width:$mobile){
+       padding: 0; 
+    }
+  }
+  &__content {
+    max-width: em(400, 12);
+    @media (max-width:$mobile){
+      max-width: 100%;
+      padding: 0 em(20, 12);
+    }
+  }
+  &__video {
+    flex: 0 1 50%;
+    &-wrap {
+      box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+      border-radius: 8px;
+      @extend %responsiveVideo;
+    }
+  }
+}
+.statistic-experts {
+  max-width: em(654, 12);
+  position: relative;
+  &__square {
+    position: absolute;
+    border-radius: em(30, 12);
+    background-color: #EC5863;
+    transform: rotate(-30deg);
+    z-index: 2;
+    &_1 {
+      width: em(66, 12);
+      height: em(66, 12);
+      left: -(em(18, 12));
+      bottom: -(em(18, 12));
+      border-radius: em(16, 12);
+    }
+    &_2 {
+      width: em(96, 12);
+      height: em(96, 12);
+      top: -(em(38, 12));
+      right: 52%;
+      transform: rotate(105deg);
+    }
+    &_3 {
+      width: em(127, 12);
+      height: em(127, 12);
+      top: 0;
+      right: -(em(55, 12));
+    }
+  }
+}
+.body-statistic-experts {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+  border-radius: 16px;
+  padding: em(28, 12) em(80, 12);
+  justify-content: space-between;
+  z-index: 5;
+  @media (max-width:$mobile){
+    padding: em(28, 12) em(40, 12);
+  }
+  @media (max-width:$mobileSmall){
+     flex-direction: column; 
+     gap: em(20, 12);
+  }
+  &__value {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.14em;    
+    color: #EC5863;
+    text-align: center;
+    margin-bottom: em(5, 36);
+    @media (max-width:$mobile){
+       letter-spacing: 0.04em; 
+    }
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.37em;
+    text-transform: uppercase;
+    color: #000000;
+    @media (max-width:$mobile){
+       letter-spacing: 0.3em; 
     }
   }
 }

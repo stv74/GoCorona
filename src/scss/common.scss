@@ -1,7 +1,7 @@
 .content {
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 44, 34);
+    @include adaptiveValue("font-size", 44, 32);
     line-height: 1.26;
     color: #000000;
     &:not(:last-child) {
