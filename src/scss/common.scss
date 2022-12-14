@@ -23,10 +23,12 @@
     &:not(:last-child) {
       margin-bottom: em(24, 12);
     }
+    &_lw {
+      max-width: em(600, 12);
+      margin: 0 auto;
+    }
+  }
+  &_center {
+    text-align: center;
   }
 }
-// .content_red {
-//   span {
-//     color: #ec5863;
-//   }
-// }

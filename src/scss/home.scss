@@ -279,3 +279,103 @@
     }
   }
 }
+// Section Healthcare
+.healthcare {
+  @include adaptiveValue("padding-top", 80, 30);
+  @include adaptiveValue("padding-bottom", 30, 20);
+  &__content {
+    @include adaptiveValue("margin-bottom", 60, 30);
+    margin-bottom: em(60, 12);    
+  }
+  &__items {
+    display: flex;
+    @media (max-width:$tablet){
+      flex-direction: column;
+      @include adaptiveValue("row-gap", 30, 20, 0, 992, 320);
+    }
+  }
+  &__column {
+    flex: 0 1 33.33%;
+    padding: 0 em(36, 12);
+    position: relative;
+    @media (max-width:$pc){
+      padding: 0 em(18, 12);
+    }
+    &_1 {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #ec5863;
+      }
+      &::before {
+        width: em(66, 12);
+        height: em(66, 12);
+        border-radius: em(16, 12);
+        left: em(15, 12);
+        bottom: -(em(35, 12));
+        transform: rotate(-30deg);
+      }
+      &::after {
+        width: em(97, 12);
+        height: em(97, 12);
+        top: em(35, 12);
+        right: -(em(10, 12));
+        border-radius: em(30, 12);
+        transform: rotate(105deg);
+      }
+    }
+    &_2 {
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #ec5863;
+        width: em(127, 12);
+        height: em(127, 12);
+        border-radius: em(30, 12);
+        right: -(em(35, 12));
+        bottom: -(em(35, 12));
+        transform: rotate(-30deg);
+      }
+    }
+    &_3 {
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #ec5863;
+        width: em(66, 12);
+        height: em(66, 12);
+        border-radius: em(16, 12);
+        right: em(15, 12);
+        top: -(em(35, 12));
+        transform: rotate(-30deg);
+        @media (max-width:$tablet){
+          display: none;
+        }
+      }
+    }
+  }
+}
+.item-healthcare {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+  border-radius: 8px;
+  padding: em(37, 12) em(18, 12);
+  text-align: center;
+  &__img {
+    margin-bottom: em(58, 12);
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 138.5%;
+    letter-spacing: 0.08em;
+    color: #000000;
+    &:not(:last-child) {
+      margin-bottom: em(4, 16);
+    }
+  }
+}
