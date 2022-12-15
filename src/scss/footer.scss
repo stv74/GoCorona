@@ -1,3 +1,14 @@
-//====================================================================================================
-
-//====================================================================================================
+.footer {
+  @include adaptiveValue("margin-top", 45, 30);
+  @include adaptiveValue("margin-bottom", 45, 30);
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: em(55, 12);
+    row-gap: em(20, 12);
+    @media (max-width:$mobileSmall){
+       flex-direction: column; 
+    }
+  }
+}
